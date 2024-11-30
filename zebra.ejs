@@ -1,0 +1,29 @@
+<div class="bignumbercell" >
+    <% if(main[i].left_no == "" || main[i].right_no == "" || main[i].left_no == null || main[i].right_no == null  ){ %>
+                <% if((main[i].left_no == "" || main[i].left_no == null) &&( main[i].right_no == "" || main[i].right_no == null)){ %>
+            <p style="font-size: large; color: red;">*&#160;*
+            </P>
+
+            <%} else if( main[i].right_no == "" || main[i].right_no == null){ %>
+            <p style="font-size: large; "><%=main[i].left_no%>&#160;<span
+                    style="color: red;">*</span>
+            </P>
+
+            <% }else{ %>
+
+            <p style="font-size: large; "><span
+                    style="color: red;">*</span>&#160;<%=main[i].right_no%>
+            </P>
+            <% } %>
+
+            <% } else{ %>
+            <% if(values[i].red == -1 ){ %>
+            <p style="font-size: large; color: red;">
+                <%= main[i].left_no %>&#160;<%= main[i].right_no %>
+            </P>
+            <% } else{ %>
+            <p style="font-size: large; "> <%= main[i].left_no %>&#160;<%= main[i].right_no %>
+            </P>
+            <% } %>
+            <% } %>
+        </div>

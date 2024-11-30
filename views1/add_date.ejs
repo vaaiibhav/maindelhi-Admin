@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
+    <title>Cubic Admin Template</title>
+    <!-- ===== Bootstrap CSS ===== -->
+    <link href="../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- ===== Plugin CSS ===== -->
+    <link href="../plugins/components/chartist-js/dist/chartist.min.css" rel="stylesheet">
+    <link href="../plugins/components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+    <link href='../plugins/components/fullcalendar/fullcalendar.css' rel='stylesheet'>
+    <!-- ===== Animation CSS ===== -->
+    <link href="../css/animate.css" rel="stylesheet">
+    <!-- ===== Custom CSS ===== -->
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- ===== Color CSS ===== -->
+    <link href="../css/colors/red.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<style>
+    .center {
+        margin: auto;
+        width: 60%;
+        /* border: 3px solid #73AD21; */
+        padding: center;
+    }
+
+    .buttons {
+        width: 960px;
+        margin: auto;
+    }
+
+    .action_btn {
+        width: 500px;
+        margin: 0 auto;
+    }
+</style>
+
+<body class="mini-sidebar fix-header">
+    <!-- ===== Main-Wrapper ===== -->
+    <div id="wrapper">
+        <div class="preloader">
+            <div class="cssload-speeding-wheel"></div>
+        </div>
+        <!-- ===== Top-Navigation ===== -->
+        <nav class="navbar navbar-default navbar-static-top m-b-0">
+            <div class="navbar-header">
+                <a class="navbar-toggle font-20 hidden-sm hidden-md hidden-lg " href="javascript:void(0)"
+                    data-toggle="collapse" data-target=".navbar-collapse">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <div class="top-left-part">
+                    <a class="logo" href="">
+                        <b>
+                            <img src="../plugins/images/logo.png" alt="home" />
+                        </b>
+                        <span>
+                            <img src="../plugins/images/logo-text.png" alt="homepage" class="dark-logo" />
+                        </span>
+                    </a>
+                </div>
+                <ul class="nav navbar-top-links navbar-left hidden-xs">
+                    <li>
+                        <form role="search" class="app-search hidden-xs">
+                            <i class="icon-magnifier"></i>
+                            <input type="text" placeholder="Search..." class="form-control">
+                        </form>
+                    </li>
+                </ul>
+                <ul class="nav navbar-top-links navbar-right pull-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle waves-effect waves-light font-20" data-toggle="dropdown"
+                            href="javascript:void(0);">
+                            <i class="icon-speech"></i>
+                            <span class="badge badge-xs badge-danger">6</span>
+                        </a>
+                        <ul class="dropdown-menu mailbox animated bounceInDown">
+                            <li>
+                                <div class="drop-title">You have 4 new messages</div>
+                            </li>
+                            <li>
+                                <div class="message-center">
+                                    <a href="javascript:void(0);">
+                                        <div class="user-img">
+                                            <img src="../plugins/images/users/1.jpg" alt="user" class="img-circle">
+                                            <span class="profile-status online pull-right"></span>
+                                        </div>
+                                        <div class="mail-contnet">
+                                            <h5>Pavan kumar</h5>
+                                            <span class="mail-desc">Just see the my admin!</span>
+                                            <span class="time">9:30 AM</span>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:void(0);">
+                                        <div class="user-img">
+                                            <img src="../plugins/images/users/2.jpg" alt="user" class="img-circle">
+                                            <span class="profile-status busy pull-right"></span>
+                                        </div>
+                                        <div class="mail-contnet">
+                                            <h5>Sonu Nigam</h5>
+                                            <span class="mail-desc">I've sung a song! See you at</span>
+                                            <span class="time">9:10 AM</span>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:void(0);">
+                                        <div class="user-img">
+                                            <img src="../plugins/images/users/3.jpg" alt="user" class="img-circle"><span
+                                                class="profile-status away pull-right"></span>
+                                        </div>
+                                        <div class="mail-contnet">
+                                            <h5>Arijit Sinh</h5>
+                                            <span class="mail-desc">I am a singer!</span>
+                                            <span class="time">9:08 AM</span>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:void(0);">
+                                        <div class="user-img">
+                                            <img src="../plugins/images/users/4.jpg" alt="user" class="img-circle">
+                                            <span class="profile-status offline pull-right"></span>
+                                        </div>
+                                        <div class="mail-contnet">
+                                            <h5>Pavan kumar</h5>
+                                            <span class="mail-desc">Just see the my admin!</span>
+                                            <span class="time">9:02 AM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="text-center" href="javascript:void(0);">
+                                    <strong>See all notifications</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="right-side-toggle">
+                        <a class="right-side-toggler waves-effect waves-light b-r-0 font-20" href="javascript:void(0)">
+                            <i class="icon-settings"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- ===== Top-Navigation-End ===== -->
+        <!-- ===== Left-Sidebar ===== -->
+        <aside class="sidebar">
+            <div class="scroll-sidebar">
+                <nav class="sidebar-nav">
+                    <ul id="side-menu">
+                        <li>
+                            <a class="active waves-effect" href="/dashboard" aria-expanded="false"><i
+                                    class="icon-screen-desktop fa-fw"></i> <span class="hide-menu"> Dashboard
+                                </span></a>
+                        </li>
+
+
+                    </ul>
+                </nav>
+            </div>
+
+        </aside>
+        <!-- ===== Left-Sidebar-End ===== -->
+        <!-- ===== Page-Content ===== -->
+        <div class="page-wrapper">
+            <!-- ===== Page-Container ===== -->
+            <div class="container-fluid">
+                <!-- ___________________________________________________________ Morning __________________________________________________________________________________ -->
+
+                <div class="row">
+                    <% if(status=="false" ){ %>
+                    <div class="col-md-12 col-sm-12">
+                        <div style="background-color: #ff0808;" class="white-box ">
+                            <h4 style="text-align: center; color: #ffffff;" class="box-title">Already Inserted</h4>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+                <!-- ___________________________________________________________ Morning __________________________________________________________________________________ -->
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <h1 name="mr" style="background-color: rosybrown;"></h1>
+                        <form action="/morning/old_data" class="form-inline" method="post">
+                            <div style="background-color: #cf8312;" class="white-box ">
+                                <h4 style="text-align: center; color: #ffffff;" class="box-title">Delhi Morning</h4>
+                            </div>
+                            <div style="text-align: center;"><input type="date" id="dd" name="date"
+                                    style="border: 1px solid #000000;"></div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="white-box sd-widget m-b-0 b-b-0 ">
+                                    <h4 style="text-align: center;" class="box-title"> 11 : 30 AM</h4>
+                                    <div class="center">
+
+                                        <div class="form-group">
+                                            <input oninput="javascript: if (this.value > this.maxLength) ex_value(this)"
+                                                type="number" style="border: 1px solid #000000;" class="form-control"
+                                                placeholder="Enter number" id="value" name="value" min="0"
+                                                maxlength="999">
+                                        </div>
+                                        &nbsp;
+                                        &nbsp;
+                                        &nbsp;
+                                        <div class="form-group">
+                                            <input oninput="javascript: if (this.value > this.maxLength) ex_value(this)"
+                                                type="number" style="border: 1px solid #000000;" class="form-control"
+                                                placeholder="Enter " name="Lvalue" id="Lvalue" min="0" maxlength="9">
+                                        </div>
+                                        <br><br>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="white-box sd-widget m-b-0 b-b-0 ">
+                                    <h4 style="text-align: center;" class="box-title">12 : 30 PM</h4>
+
+                                    <div class="center">
+
+                                        <div class="form-group">
+                                            <input oninput="javascript: if (this.value > this.maxLength) ex_value(this)"
+                                                type="number" style="border: 1px solid #000000;" class="form-control"
+                                                placeholder="Enter number" name="value1" id="value1" min="0"
+                                                maxlength="999">
+                                        </div>
+                                        &nbsp;
+                                        &nbsp; -
+                                        &nbsp;
+                                        <div class="form-group">
+                                            <input oninput="javascript: if (this.value > this.maxLength) ex_value(this)"
+                                                type="number" style="border: 1px solid #000000;" class="form-control"
+                                                placeholder="Enter number" name="value2" id="value2" maxlength="9">
+                                        </div>
+                                        <br><br>
+                                        <div class="button">
+                                            <button type="submit" class="btn btn-success"> submit</button>&nbsp; &nbsp;
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- ___________________________________________________________ Day __________________________________________________________________________________ -->
+
+                <br><br>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <form action="/day/old_data" class="form-inline" method="post">
+                            <div style="background-color: #cf8312;" class="white-box ">
+                                <h4 style="text-align: center; color: #ffffff;" class="box-title">Delhi Day</h4>
+                            </div>
+                            <div style="text-align: center;"><input type="date" name="date"
+                                    style="border: 1px solid #000000;"></div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="white-box sd-widget m-b-0 b-b-0 ">
+                                    <h4 style="text-align: center;" class="box-title">01 : 25 PM </h4>
+                                    <div class="center">
+
+                                        <div class="form-group">
+                                            <input oninput="javascript: if (this.value > this.maxLength) ex_value(this)"
+                                                type="number" style="border: 1px solid #000000;" class="form-control"
+                                                placeholder="Enter number" name="value" min="0" maxlength="999">
+                                        </div>
+                                        &nbsp;
+                                        &nbsp;
+                                        &nbsp;
+                                        <div class="form-group">
+                                            <input oninput="javascript: if (this.value > this.maxLength) ex_value(this)"
+                                                type="number" style="border: 1px solid #000000;" class="form-control"
+                                                placeholder="Enter " name="Lvalue" min="0" maxlength="9">
+                                        </div>
+                                        <br><br>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="white-box sd-widget m-b-0 b-b-0 ">
+                                    <h4 style="text-align: center;" class="box-title">03 : 00 PM</h4>
+
+                                    <div class="center">
+
+                                        <div class="form-group">
+                                            <input oninput="javascript: if (this.value > this.maxLength) ex_value(this)"
+                                                type="number" style="border: 1px solid #000000;" class="form-control"
+                                                placeholder="Enter number" name="value1" min="0" maxlength="999">
+                                        </div>
+                                        &nbsp;
+                                        &nbsp; -
+                                        &nbsp;
+                                        <div class="form-group">
+                                            <input oninput="javascript: if (this.value > this.maxLength) ex_value(this)"
+                                                type="number" style="border: 1px solid #000000;" class="form-control"
+                                                placeholder="Enter number" name="value2" maxlength="9">
+                                        </div>
+                                        <br><br>
+                                        <div class="button">
+                                            <button type="submit" class="btn btn-success"> submit</button>&nbsp; &nbsp;
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+                <br><br>
+                <!-- ___________________________________________________________ night  __________________________________________________________________________________ -->
+
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <form action="/night/old_data" class="form-inline" method="post">
+                            <div style="background-color: #cf8312;" class="white-box ">
+                                <h4 style="text-align: center; color: #ffffff;" class="box-title">Delhi Night</h4>
+                            </div>
+                            <div style="text-align: center;"><input type="date" name="date"
+                                    style="border: 1px solid #000000;"></div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="white-box sd-widget m-b-0 b-b-0 ">
+                                    <h4 style="text-align: center;" class="box-title">08 : 50 PM </h4>
+                                    <div class="center">
+
+                                        <div class="form-group">
+                                            <input oninput="javascript: if (this.value > this.maxLength) ex_value(this)"
+                                                type="number" style="border: 1px solid #000000;" class="form-control"
+                                                placeholder="Enter number" name="value" min="0" maxlength="999">
+                                        </div>
+                                        &nbsp;
+                                        &nbsp;
+                                        &nbsp;
+                                        <div class="form-group">
+                                            <input oninput="javascript: if (this.value > this.maxLength) ex_value(this)"
+                                                type="number" style="border: 1px solid #000000;" class="form-control"
+                                                placeholder="Enter " name="Lvalue" min="0" maxlength="9">
+                                        </div>
+                                        <br><br>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="white-box sd-widget m-b-0 b-b-0 ">
+                                    <h4 style="text-align: center;" class="box-title">10 : 30 PM</h4>
+
+                                    <div class="center">
+
+                                        <div class="form-group">
+                                            <input oninput="javascript: if (this.value > this.maxLength) ex_value(this)"
+                                                type="number" style="border: 1px solid #000000;" class="form-control"
+                                                placeholder="Enter number" name="value1" min="0" maxlength="999">
+                                        </div>
+                                        &nbsp;
+                                        &nbsp; -
+                                        &nbsp;
+                                        <div class="form-group">
+                                            <input oninput="javascript: if (this.value > this.maxLength) ex_value(this)"
+                                                type="number" style="border: 1px solid #000000;" class="form-control"
+                                                placeholder="Enter number" name="value2" maxlength="9">
+                                        </div>
+                                        <br><br>
+                                        <div class="button">
+                                            <button type="submit" class="btn btn-success"> submit</button>&nbsp; &nbsp;
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+
+                <br><br>
+                <!-- ___________________________________________________________ kalyaan __________________________________________________________________________________ -->
+
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <form action="/kalyan/old_data" class="form-inline" method="post">
+                            <div style="background-color: #cf8312;" class="white-box ">
+                                <h4 style="text-align: center; color: #ffffff;" class="box-title">Kalyan Market</h4>
+                            </div>
+                            <div style="text-align: center;"><input type="date" name="date"
+                                    style="border: 1px solid #000000;"></div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="white-box sd-widget m-b-0 b-b-0 ">
+                                    <h4 style="text-align: center;" class="box-title">04:00 PM </h4>
+                                    <div class="center">
+
+                                        <div class="form-group">
+                                            <input oninput="javascript: if (this.value > this.maxLength) ex_value(this)"
+                                                type="number" style="border: 1px solid #000000;" class="form-control"
+                                                placeholder="Enter number" name="value" min="0" maxlength="999">
+                                        </div>
+                                        &nbsp;
+                                        &nbsp;
+                                        &nbsp;
+                                        <div class="form-group">
+                                            <input oninput="javascript: if (this.value > this.maxLength) ex_value(this)"
+                                                type="number" style="border: 1px solid #000000;" class="form-control"
+                                                placeholder="Enter " name="Lvalue" min="0" maxlength="9">
+                                        </div>
+                                        <br><br>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="white-box sd-widget m-b-0 b-b-0 ">
+                                    <h4 style="text-align: center;" class="box-title">06:00 PM</h4>
+
+                                    <div class="center">
+
+                                        <div class="form-group">
+                                            <input oninput="javascript: if (this.value > this.maxLength) ex_value(this)"
+                                                type="number" style="border: 1px solid #000000;" class="form-control"
+                                                placeholder="Enter number" name="value1" min="0" maxlength="999">
+                                        </div>
+                                        &nbsp;
+                                        &nbsp; -
+                                        &nbsp;
+                                        <div class="form-group">
+                                            <input oninput="javascript: if (this.value > this.maxLength) ex_value(this)"
+                                                type="number" style="border: 1px solid #000000;" class="form-control"
+                                                placeholder="Enter number" name="value2" maxlength="9">
+                                        </div>
+                                        <br><br>
+                                        <div class="button">
+                                            <button type="submit" class="btn btn-success"> submit</button>&nbsp; &nbsp;
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+                <br><br>
+                <!-- ___________________________________________________________ main bajar  __________________________________________________________________________________ -->
+
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <form action="/main_bajar/old_data" class="form-inline" method="post">
+                            <div style="background-color: #cf8312;" class="white-box ">
+                                <h4 style="text-align: center; color: #ffffff;" class="box-title">Main Bajar</h4>
+                            </div>
+                            <div style="text-align: center;"><input type="date" name="date"
+                                    style="border: 1px solid #000000;"></div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="white-box sd-widget m-b-0 b-b-0 ">
+                                    <h4 style="text-align: center;" class="box-title">09:35 PM </h4>
+                                    <div class="center">
+
+                                        <div class="form-group">
+                                            <input oninput="javascript: if (this.value > this.maxLength) ex_value(this)"
+                                                type="number" style="border: 1px solid #000000;" class="form-control"
+                                                placeholder="Enter number" name="value" min="0" maxlength="999">
+                                        </div>
+                                        &nbsp;
+                                        &nbsp;
+                                        &nbsp;
+                                        <div class="form-group">
+                                            <input oninput="javascript: if (this.value > this.maxLength) ex_value(this)"
+                                                type="number" style="border: 1px solid #000000;" class="form-control"
+                                                placeholder="Enter " name="Lvalue" min="0" maxlength="9">
+                                        </div>
+                                        <br><br>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="white-box sd-widget m-b-0 b-b-0 ">
+                                    <h4 style="text-align: center;" class="box-title">12:05 AM</h4>
+
+                                    <div class="center">
+
+                                        <div class="form-group">
+                                            <input oninput="javascript: if (this.value > this.maxLength) ex_value(this)"
+                                                type="number" style="border: 1px solid #000000;" class="form-control"
+                                                placeholder="Enter number" name="value1" min="0" maxlength="999">
+                                        </div>
+                                        &nbsp;
+                                        &nbsp; -
+                                        &nbsp;
+                                        <div class="form-group">
+                                            <input oninput="javascript: if (this.value > this.maxLength) ex_value(this)"
+                                                type="number" style="border: 1px solid #000000;" class="form-control"
+                                                placeholder="Enter number" name="value2" maxlength="9">
+                                        </div>
+                                        <br><br>
+                                        <div class="button">
+                                            <button type="submit" class="btn btn-success"> submit</button>&nbsp; &nbsp;
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+
+
+                <br><br>
+                <!-- ___________________________________________________________ chakri __________________________________________________________________________________ -->
+
+                <div class="row" style="display: none;">
+                    <div class="col-md-12 col-sm-12">
+                        <div style="background-color: #cf8312;" class="white-box ">
+                            <h4 style="text-align: center; color: #ffffff;" class="box-title">Chakri bajar </h4>
+                            <h4 id="chakri" style="text-align: center; color: #ffffff;" class="box-title"></h4>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="white-box sd-widget m-b-0 b-b-0 ">
+                                <h4 style="text-align: center;" class="box-title"> 04:00 PM</h4>
+                                <!-- <input style=" width: 25%;
+                            padding: 12px 20px;
+                            margin: 8px 0;
+                            box-sizing: border-box;" type="number"> -->
+                                <div class="center">
+                                    <form action="/chakri/left_value" class="form-inline" method="POST">
+                                        <div class="form-group">
+                                            <input oninput="javascript: if (this.value > this.maxLength) ex_value(this)"
+                                                type="number" style="border: 1px solid #000000; align-self: center;"
+                                                class="form-control" placeholder="Enter number" name="value"
+                                                maxlength="99">
+                                        </div>
+
+                                        <br><br>
+                                        <div class="button">
+                                            <button type="submit" class="btn btn-success"> submit</button>&nbsp;
+                                            &nbsp;
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- for delhi teer -->
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div style="background-color: #cf8312;" class="white-box ">
+                            <h4 style="text-align: center; color: #ffffff;" class="box-title">Delhi Teer </h4>
+                            <h4 id="teer" style="text-align: center; color: #ffffff;" class="box-title"></h4>
+
+                        </div>
+                        <form action="/teer/old_data" class="form-inline" method="POST">
+                            <div style="text-align: center; "><input type="date" id="dd" name="date"
+                                    style="border: 1px solid #000000;"></div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="white-box sd-widget m-b-0 b-b-0 ">
+                                    <h4 style="text-align: center;" class="box-title"> 04:00 PM</h4>
+                                    <!-- <input style=" width: 25%;
+                            padding: 12px 20px;
+                            margin: 8px 0;
+                            box-sizing: border-box;" type="number"> -->
+                                    <div class="center">
+
+                                        <div class="form-group">
+                                            <input oninput="javascript: if (this.value > this.maxLength) ex_value(this)"
+                                                type="number" style="border: 1px solid #000000; align-self: center;"
+                                                class="form-control" placeholder="Enter number" name="value"
+                                                maxlength="99">
+                                        </div>
+
+                                        <br><br>
+                                        <div class="button">
+                                            <button type="submit" class="btn btn-success"> submit</button>&nbsp;
+                                            &nbsp;
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+
+
+
+                <!-- ===== Right-Sidebar ===== -->
+                <div class="right-sidebar">
+                    <div class="slimscrollright">
+                        <div class="rpanel-title"> Service Panel <span><i
+                                    class="icon-close right-side-toggler"></i></span> </div>
+                        <div class="r-panel-body">
+                            <ul id="themecolors" class="m-t-20">
+                                <li><b>With Light sidebar</b></li>
+                                <li><a href="javascript:void(0)" data-theme="default"
+                                        class="default-theme working">1</a></li>
+                                <li><a href="javascript:void(0)" data-theme="green" class="green-theme">2</a></li>
+                                <li><a href="javascript:void(0)" data-theme="yellow" class="yellow-theme">3</a></li>
+                                <li><a href="javascript:void(0)" data-theme="red" class="red-theme">4</a></li>
+                                <li><a href="javascript:void(0)" data-theme="purple" class="purple-theme">5</a></li>
+                                <li><a href="javascript:void(0)" data-theme="black" class="black-theme">6</a></li>
+                                <li class="db"><b>With Dark sidebar</b></li>
+                                <li><a href="javascript:void(0)" data-theme="default-dark"
+                                        class="default-dark-theme">7</a></li>
+                                <li><a href="javascript:void(0)" data-theme="green-dark" class="green-dark-theme">8</a>
+                                </li>
+                                <li><a href="javascript:void(0)" data-theme="yellow-dark"
+                                        class="yellow-dark-theme">9</a></li>
+                                <li><a href="javascript:void(0)" data-theme="red-dark" class="red-dark-theme">10</a>
+                                </li>
+                                <li><a href="javascript:void(0)" data-theme="purple-dark"
+                                        class="purple-dark-theme">11</a></li>
+                                <li><a href="javascript:void(0)" data-theme="black-dark" class="black-dark-theme">12</a>
+                                </li>
+                            </ul>
+                            <ul class="m-t-20 chatonline">
+                                <li><b>Chat option</b></li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/1.jpg" alt="user-img"
+                                            class="img-circle"> <span>Varun Dhavan <small
+                                                class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/2.jpg" alt="user-img"
+                                            class="img-circle"> <span>Genelia Deshmukh <small
+                                                class="text-warning">Away</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/3.jpg" alt="user-img"
+                                            class="img-circle"> <span>Ritesh Deshmukh <small
+                                                class="text-danger">Busy</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/4.jpg" alt="user-img"
+                                            class="img-circle"> <span>Arijit Sinh <small
+                                                class="text-muted">Offline</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/5.jpg" alt="user-img"
+                                            class="img-circle"> <span>Govinda Star <small
+                                                class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="../plugins/images/users/6.jpg" alt="user-img"
+                                            class="img-circle"> <span>John Abraham<small
+                                                class="text-success">online</small></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- ===== Right-Sidebar-End ===== -->
+            </div>
+            <!-- ===== Page-Container-End ===== -->
+            <footer class="footer t-a-c">
+                © 2021 Cubic Admin
+            </footer>
+        </div>
+        <!-- ===== Page-Content-End ===== -->
+    </div>
+    <!-- ===== Main-Wrapper-End ===== -->
+    <!-- ==============================
+        Required JS Files
+    =============================== -->
+    <!-- ===== jQuery ===== -->
+    <script src="../plugins/components/jquery/dist/jquery.min.js"></script>
+    <!-- ===== Bootstrap JavaScript ===== -->
+    <script src="../bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- ===== Slimscroll JavaScript ===== -->
+    <script src="../js/jquery.slimscroll.js"></script>
+    <!-- ===== Wave Effects JavaScript ===== -->
+    <script src="../js/waves.js"></script>
+    <!-- ===== Menu Plugin JavaScript ===== -->
+    <script src="../js/sidebarmenu.js"></script>
+    <!-- ===== Custom JavaScript ===== -->
+    <script src="../js/custom.js"></script>
+    <!-- ===== Plugin JS ===== -->
+    <script src="../plugins/components/chartist-js/dist/chartist.min.js"></script>
+    <script src="../plugins/components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
+    <script src='../plugins/components/moment/moment.js'></script>
+    <script src='../plugins/components/fullcalendar/fullcalendar.js'></script>
+    <script src="../js/db2.js"></script>
+    <!-- ===== Style Switcher JS ===== -->
+    <script src="../plugins/components/styleswitcher/jQuery.style.switcher.js"></script>
+</body>
+<script>
+    function ex_value(t) {
+        alert('Value Exceed');
+        t.value = 0;
+    }
+</script>
+
+<!-- <script>
+    jQuery.get('/morning/demo',
+        function (result, status, jqXHR) {
+            document.getElementById("val").innerHTML = result
+
+        }
+    );
+</script> -->
+
+<!-- demo Ajax call  -->
+<!-- <script>
+    var value = document.getElementById('value').value;
+    var Lvalue = document.getElementById('Lvalue').value;
+    var value1 = document.getElementById('value1').value;
+    var value2 = document.getElementById('value2').value;
+    var date = document.getElementById('dd').value;
+
+    $.ajax({
+        url: '/morning/old_data',
+        method: 'post',
+        data: {
+            'value ': value,
+            'lvalue' : Lvalue,
+            'value1' : value1,
+            'value2' : value2,
+            'date' : date
+        },
+        success: function (info) {
+            document.getElementById('val').innerHTML = info;
+        }
+    })
+</script> -->
