@@ -4,7 +4,8 @@ var router = express.Router();
 const knex = require('../knex_files');
 const moment = require("moment-timezone")
 var multer = require('multer')
-
+const fs = require('fs');
+const path = require('path');
 
 
 router.get('/', function (req, res) {
@@ -14,11 +15,16 @@ router.get('/', function (req, res) {
 
 
 var storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-         cb(null, "./routes/image");
+  destination: function (req, file, cb) {
+    const uploadPath = path.join(__dirname, 'image'); // Resolve absolute path to the image folder
+    
+    // Check if the directory exists, create it if not
+    if (!fs.existsSync(uploadPath)) {
+      fs.mkdirSync(uploadPath, { recursive: true });
+    }
 
-    },
-
+    cb(null, uploadPath);
+  },
     filename: function (req, file, cb) {
 var file_name = Date.now() + file.originalname;
         cb(null, file_name)
@@ -28,7 +34,7 @@ var file_name = Date.now() + file.originalname;
         knex("image")
       .insert({
         img_name:
-          "http://maindelhimatka.com:3222/published-images/" + file_name,
+          ("http://maindelhimatka.com:3222/published-images/" + file_name).trim(),
         date: date,
       })
       .then((result) => {
